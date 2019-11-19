@@ -1,0 +1,10 @@
+$bg-color: rgb(255, 255, 255);
+$text-color: rgb(41, 191, 133);
+
+body{
+    background-color:$bg-color;
+    text-align: center;
+    color: $text-color;
+}
+
+@import 'GeocodeResult'; 
