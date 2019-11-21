@@ -1,0 +1,10 @@
+.searchForm{
+    text-align: center;
+    &__input{
+        font-size: 24px;
+    }
+    &__submit{
+        font-size: 24px;
+        background-color: #fff;
+    }
+}
