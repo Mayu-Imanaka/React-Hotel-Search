@@ -1,9 +1,11 @@
 .app{
-    width: 1000px;
-    margin: 0 auto;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: flex-start;
 
     &__title{
         text-align: center;
+        margin-top: 0;
     }
 
     &__result{
@@ -11,9 +13,30 @@
     }
 }
 
+.search-page{
+    width: 900px;
+}
+
+.left-navi{
+    list-style-type: none;
+    margin-right: 40px;
+    padding-right: 40px;
+    border-right: 1px solid #ccc;
+    li{
+        font-weight: bold;
+        font-size: 23px;
+    }
+}
+
+.result-area{
+    display: flex;
+}
+
 .result-right{
     margin-left: 20px;
 }
 
-
+.app__result{
+    margin-top: 30px;
+}
 
