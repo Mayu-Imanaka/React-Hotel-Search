@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 
 import SearchForm from './SearchForm';
 import GeocodeResult from './GeocodeResult';
@@ -7,6 +8,8 @@ import HotelsTable from './HotelsTable';
 
 import { geocode } from '../domain/Geocoder';
 import { searchHotelByLocation } from '../domain/HotelRepository';
+
+const sortedHotels = (hotels, sortKey) => _.sortBy(hotels, h => h[sortKey]);
 
 const GEOCODE_ENDPOINT = 'https://maps.googleapis.com/maps/api/geocode/json';
 
@@ -18,10 +21,7 @@ class App extends Component {
         lat: 35.6585805,
         lng: 139.7454329,
       },
-      hotels: [
-        { id: 111, name: 'Apa hotel', url: 'https://google.com' },
-        { id: 222, name: 'Hyatt', url: 'https://google.com' },
-      ],
+      sortKey: 'price',
     };
   }
 
@@ -55,10 +55,15 @@ class App extends Component {
       })
       .then((hotels) => {
         this.setState({ hotels });
+        this.setState({ hotels: sortedHotels(hotels, this.state.sortKey) });
       })
       .catch(() => {
         this.setErrorMessage('Failed to connect');
       });
+  }
+
+  handleSortKeyChange(sortKey) {
+    this.setState({ sortKey, hotels: sortedHotels(this.state.hotels, sortKey) });
   }
 
   render() {
@@ -74,7 +79,11 @@ class App extends Component {
               location={this.state.location}
             />
             <h2>Hotel Search Result</h2>
-            <HotelsTable hotels={this.state.hotels} />
+            <HotelsTable
+              hotels={this.state.hotels}
+              sortKey={this.state.sortKey}
+              onSort={sortKey => this.handleSortKeyChange(sortKey)}
+            />
 
           </div>
         </div>

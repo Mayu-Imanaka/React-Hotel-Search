@@ -2743,6 +2743,11 @@ generate-object-property@^1.1.0:
   dependencies:
     is-property "^1.0.0"
 
+geolib@2.0.22:
+  version "2.0.22"
+  resolved "https://registry.yarnpkg.com/geolib/-/geolib-2.0.22.tgz#d74e96ebea2e0049ef48077c1cd1214063e27200"
+  integrity sha1-106W6+ouAEnvSAd8HNEhQGPicgA=
+
 get-caller-file@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
@@ -3794,6 +3799,11 @@ lodash.uniq@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
+
+lodash@4.17.4:
+  version "4.17.4"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+  integrity sha1-eCA6TRwyiuHYbcpkYONptX9AVa4=
 
 lodash@^4.0.0, lodash@^4.16.2, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0, lodash@~4.17.10:
   version "4.17.15"
